@@ -1,0 +1,26 @@
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    padding-left: 50px;
+}
+mat-form-field{
+    width: 295px;
+    margin-bottom: 5px;
+    height: 65px;
+    
+}
+mat-hint{
+    margin-left: 170px;
+}
+mat-icon{
+  color: rgb(161, 161, 161);
+}
+.buttonsPart{
+    padding-top: 10px;
+}
+.submitBtn{
+    background-color: #A03037;
+    color: white;
+    width: 295px;
+}

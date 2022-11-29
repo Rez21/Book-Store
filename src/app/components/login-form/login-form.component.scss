@@ -1,0 +1,61 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    padding-left: 50px;
+   
+    
+}
+mat-form-field{
+    width: 295px;
+    
+}
+mat-hint{
+    margin-left: 170px;
+}
+mat-icon{
+  color: rgb(161, 161, 161);
+}
+
+.buttonsPart{
+    padding-top: 10px;
+}
+.submitBtn{
+    background-color: #A03037;
+    color: white;
+    width: 295px;
+}
+.OnlineButtons{
+    padding-top:10px ;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    margin-left: 25px;
+    margin-bottom: 13px;
+    margin-top: 10px;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right:20px;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: 20px;
+  }
+
+  .buttons{
+    margin-top:10px;
+    margin-right: 10px;
+    width: 143px;
+}

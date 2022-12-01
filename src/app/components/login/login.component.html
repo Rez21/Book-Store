@@ -4,7 +4,7 @@
         <p>Online Book Shopping</p>
     </div>
     <div class="login-container">
-        <div class="buttons">
+        <!-- <div class="buttons">
             <div>
                 <button class="login-btn" (click)="islogin=false">Login</button>
 
@@ -19,6 +19,14 @@
         </div>
         <div class="sign-up-form" *ngIf="islogin">
             <app-sign-up></app-sign-up> 
-        </div>
+        </div>  -->
+        <mat-tab-group class="tabs">
+            <mat-tab label="Login">
+                <app-login-form></app-login-form>
+            </mat-tab>
+            <mat-tab label="SignUp">
+                <app-sign-up></app-sign-up>
+            </mat-tab>
+        </mat-tab-group>
     </div>
 </div>

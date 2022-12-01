@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/userService/user.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,7 +12,7 @@ export class SignUpComponent implements OnInit {
   submitted = false;
   showPwd: boolean = false;
   visible=false;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private user: UserService) { }
 
   ngOnInit(): void {
     this.SignUpForm = this.formBuilder.group({
@@ -31,4 +32,22 @@ export class SignUpComponent implements OnInit {
     this.visible=!this.visible;
   }
 
+  onSubmit(){
+    this.submitted = true;
+
+    if(this.SignUpForm.valid){
+      console.log("Registration Successful");
+      let payload = {
+        fullname: this.SignUpForm.value.fullname,
+        email: this.SignUpForm.value.email,
+        password: this.SignUpForm.value.password,
+        mobile: this.SignUpForm.value.mobile
+      }
+      this.user.signup(payload).subscribe((response: any) => {
+        console.log(response);
+        localStorage.setItem('token',response.id)
+      })
+    }
+  }
+  
 }

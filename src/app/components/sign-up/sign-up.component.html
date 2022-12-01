@@ -1,6 +1,6 @@
 <div class="signup-container">
     <div class="input-fields">
-        <form  [formGroup]="SignUpForm">
+        <form  [formGroup]="SignUpForm" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="outline">
             <mat-label>Full Name</mat-label>
             <input class="input" formControlName="fullname" matInput type="text" />

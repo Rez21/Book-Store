@@ -68,3 +68,22 @@ button {
     width: 200px;
     border: none;
 }
+.input-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+::ng-deep .mat-tab-label{
+    width: 50%;
+    font-size: 20px;
+   
+    
+}
+::ng-deep .mat-ink-bar.mat-ink-bar{
+    height: 3px;
+    
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar{
+    background-color: #810917;
+}

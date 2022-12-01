@@ -5,10 +5,8 @@ mat-toolbar {
     width     : 100%;
     z-index   : 99;
     padding   : 0px 0px 0px 17%;
-
-
-
 }
+
 .book-logo{
     width     : 35px;
     height    : 28px;
@@ -98,6 +96,13 @@ input {
         opacity:   1;
         font-size: small;
       
+    }
+    span {
+        width        : 70%;
+        height       : 5px;
+        background   : #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        opacity      : 1;
     }
 }
 .cart-option{

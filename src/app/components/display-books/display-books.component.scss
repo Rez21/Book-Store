@@ -1,0 +1,31 @@
+.books-display-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+    padding: 5px;
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 50px;
+}
+.books{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 220px;
+    margin: 10px;
+    border: 1px solid rgb(189, 187, 190);
+    border-radius: 0.5px;
+}
+.book-image{
+   
+    width: 220px;
+    height: 200px;
+    background: #F5F5F5;
+    img{
+        margin-top: 10px;
+        margin-left: 55px;
+        width: 110px;
+        height: auto;
+    }
+}

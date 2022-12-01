@@ -40,7 +40,7 @@ export class LoginFormComponent implements OnInit {
       }
       this.user.login(payload).subscribe((response: any) => {
         console.log(response);
-        
+        localStorage.setItem('token',response.accessToken);
       })
     }
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginForm.value))

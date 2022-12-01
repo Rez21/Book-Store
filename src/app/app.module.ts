@@ -11,6 +11,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule} from '@angular/material/tooltip';
 
 
 
@@ -22,6 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DisplayBooksComponent } from './components/display-books/display-books.component';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,9 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginFormComponent,
     DashboardComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DisplayBooksComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,9 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatTabsModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule,
+    MatTooltipModule
 
   ],
   providers: [],

@@ -16,7 +16,7 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
     this.SignUpForm = this.formBuilder.group({
-      fullname: ['', [Validators.required]],
+      fullName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       mobile: ['', [Validators.required, Validators.minLength(10)]]
@@ -38,14 +38,14 @@ export class SignUpComponent implements OnInit {
     if(this.SignUpForm.valid){
       console.log("Registration Successful");
       let payload = {
-        fullname: this.SignUpForm.value.fullname,
+        fullName: this.SignUpForm.value.fullName,
         email: this.SignUpForm.value.email,
         password: this.SignUpForm.value.password,
         mobile: this.SignUpForm.value.mobile
       }
       this.user.signup(payload).subscribe((response: any) => {
         console.log(response);
-        localStorage.setItem('token',response.id)
+        
       })
     }
   }

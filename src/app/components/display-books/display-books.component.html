@@ -1,0 +1,19 @@
+<div class="books-display-container">
+    <div class="books" *ngFor='let book of receiveBookList'>
+        <div class="book-image">
+            <img src="../../../assets/book-cover.png" alt="Book Image here">
+        </div>
+        <div class="book-title">
+            {{book.bookName}}
+        </div>
+        <!-- <div class="book-description">
+            {{book.description}}
+        </div> -->
+        <div class="book-author">
+            <p>by {{book.author}}</p>
+        </div>
+        <div class="book-price">
+            <p>RS. {{book.price}}</p>
+        </div>
+    </div>
+</div>

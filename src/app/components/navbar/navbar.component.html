@@ -10,10 +10,27 @@
             <div><input type="text" placeholder="Search" #search></div>
         </div>
         <div class="end-buttons">
-            <div class="profile">
+            <div class="profile" [matMenuTriggerFor]="profileMenu">
                 <img class="profile-image" src="../../../assets/person_white_24dp.svg" alt="profile-image"><p>Profile</p>
-
                 <span class="bottom-line"></span>
+
+                <mat-menu #profileMenu="matMenu">
+                    <div class="Menu">
+                        <div class="menuDescription" fxLayout="column">
+                            <span class="head pad">Welcome <span *ngIf="isLoggedIn" class="UserName"></span> </span>
+                            <span *ngIf="!isLoggedIn" class=" padb">To access account and manage orders</span>
+                        </div>
+                        <div *ngIf="!isLoggedIn" (click)="redirectToLogin()" class="loginBtn">
+                            login/signup
+                        </div>
+                        <div *ngIf="isLoggedIn" (click)="redirectToLogout()" class="loginBtn chg-width">
+                            logout
+                        </div>
+                    </div>
+
+                </mat-menu>
+
+
                 <!-- <button class="profile-button"><img src="../../../assets/person_white_24dp.svg">Profile</button> -->
             </div>
 

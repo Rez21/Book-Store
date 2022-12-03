@@ -126,3 +126,26 @@ input {
     }
 
 }
+
+mat-menu{
+    width: 100px;
+}
+.Menu{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 200px;
+    margin-top: 0px;
+    padding: 10px;
+    align-content: space-between;
+}
+.loginBtn{
+    margin-top: 5px;
+    border: 0.5px solid grey;
+    border-radius: 1px;
+    width: 100px;
+    padding-left: 13px;
+    text-decoration: none;
+    color: rgb(209, 209, 209);
+}

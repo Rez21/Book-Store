@@ -1,19 +1,41 @@
-<div class="books-display-container">
-    <div class="books" *ngFor='let book of receiveBookList'>
-        <div class="book-image">
-            <img src="../../../assets/book-cover.png" alt="Book Image here">
-        </div>
-        <div class="book-title">
-            {{book.bookName}}
-        </div>
-        <!-- <div class="book-description">
+<div class="top-section">
+    <div class="Book-count">
+        <h2>Books</h2><p>(30 items)</p>
+    </div>
+</div>
+<div class="books-display-container" >
+    <div class="book-card" *ngFor='let book of receiveBookList'  (click)="onclick(book)">
+        <div  class="book-display-card">
+            <div class="book-image" >
+                <img src="../../../assets/UXbookCover.png" alt="Book Image here">
+            </div>
+            <div class="book-details">
+                <div class="book-title">
+                    {{book.bookName}}
+                </div>
+                <!-- <div class="book-description">
             {{book.description}}
-        </div> -->
-        <div class="book-author">
-            <p>by {{book.author}}</p>
+            </div> -->
+                <div class="book-author">
+                    <p>by {{book.author}}</p>
+                </div>
+
+                <div class="book-rating-section">
+                    <div class="star-rating">
+                        <p>4</p><img src="../../../assets/rating-star.svg">
+                    </div>
+                    <div class="rating-count">
+                        <p>(<span>{{book.quantity}}</span>)</p>
+                    </div>
+                </div>
+                <div class="book-price">
+                    <p>Rs. {{book.price}}</p><p class="actual-price">Rs. 2000</p>
+                </div>
+            </div>
+            <span class="quickView" >
+                Quick View
+            </span>
         </div>
-        <div class="book-price">
-            <p>RS. {{book.price}}</p>
-        </div>
+        
     </div>
 </div>

@@ -11,13 +11,13 @@
         </div>
         <div class="end-buttons">
             <div class="profile" [matMenuTriggerFor]="profileMenu">
-                <img class="profile-image" src="../../../assets/person_white_24dp.svg" alt="profile-image"><p>Profile</p>
+                <img class="profile-image" src="../../../assets/profie.svg" alt="profile-image"><p>Profile</p>
                 <span class="bottom-line"></span>
 
                 <mat-menu #profileMenu="matMenu">
                     <div class="Menu">
-                        <div class="menuDescription" fxLayout="column">
-                            <span class="head pad">Welcome <span *ngIf="isLoggedIn" class="UserName"></span> </span>
+                        <div class="menuDescription">
+                            <span class="head pad">Welcome <span *ngIf="isLoggedIn" class="UserName"></span> </span><br>
                             <span *ngIf="!isLoggedIn" class=" padb">To access account and manage orders</span>
                         </div>
                         <div *ngIf="!isLoggedIn" (click)="redirectToLogin()" class="loginBtn">
@@ -25,6 +25,10 @@
                         </div>
                         <div *ngIf="isLoggedIn" (click)="redirectToLogout()" class="loginBtn chg-width">
                             logout
+                        </div>
+                        <hr>
+                        <div class="widhlist-button">
+
                         </div>
                     </div>
 
@@ -35,7 +39,7 @@
             </div>
 
             <div class="cart-option">
-                <img class="cart-image" src="../../../assets/shopping_cart_white_24dp.svg" alt="cart-image">
+                <img class="cart-image" src="../../../assets/cart.svg" alt="cart-image">
                 <p>Cart</p>
             </div>
 

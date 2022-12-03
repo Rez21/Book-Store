@@ -26,6 +26,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DisplayBooksComponent } from './components/display-books/display-books.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { BookDescriptionComponent } from './components/book-description/book-description.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     NavbarComponent,
     FooterComponent,
     DisplayBooksComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    BookDescriptionComponent
   ],
   imports: [
     BrowserModule,

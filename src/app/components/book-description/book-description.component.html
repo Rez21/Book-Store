@@ -1,0 +1,61 @@
+<div>
+    <app-navbar></app-navbar>
+</div>
+<div class="top-nav">
+    <span (click)="returnToDash()">Home / Book: {{book.bookName}} </span>
+</div>
+<div class="book-details-container">
+
+    <div class="book-image-container">
+        <div class="image-container">
+            <img src="../../../assets/UXbookCover.png">
+        </div>
+
+        <div class="bottom-options">
+            <div class="buttons">
+                <button class="cart-button"  mat-raised-button>Add to Bag</button>
+           
+                <button class="wishlist-button" mat-raised-button>Wishlist</button>
+            </div>
+    
+        </div>
+    </div>
+    
+    <div class="book-description-container">
+        <div class="book-name">
+            {{book.bookName}}
+        </div>
+        <div class="book-author">
+           <p>By {{book.author}} </p>
+        </div>
+        <div class="book-rating-section">
+            <div class="star-rating">
+                <p>4</p><img src="../../../assets/rating-star.svg">
+            </div>
+            <div class="rating-count">
+                <p>(<span>{{book.quantity}}</span>)</p>
+            </div>
+        </div>
+        <div class="book-price">
+            <p>Rs. {{book.price}}</p><p class="actual-price">Rs. 2000</p>
+        </div>
+        <hr>
+        <div class="book-description">
+            <div>
+                <ul>
+                    <li>Book Details</li>
+                </ul>
+            </div>
+            <div>
+            {{book.description}}
+        </div>
+        
+        </div>
+        <hr>
+        <div class="">
+
+        </div>
+
+    </div>
+
+</div>

@@ -13,6 +13,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule} from '@angular/material/tooltip';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {NgxPaginationModule} from 'ngx-pagination'; 
 
 
 
@@ -27,6 +29,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DisplayBooksComponent } from './components/display-books/display-books.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { BookDescriptionComponent } from './components/book-description/book-description.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { UserCartComponent } from './components/user-cart/user-cart.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,9 @@ import { BookDescriptionComponent } from './components/book-description/book-des
     FooterComponent,
     DisplayBooksComponent,
     BookDetailsComponent,
-    BookDescriptionComponent
+    BookDescriptionComponent,
+    WishlistComponent,
+    UserCartComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +60,9 @@ import { BookDescriptionComponent } from './components/book-description/book-des
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatPaginatorModule,
+    NgxPaginationModule
 
   ],
   providers: [],

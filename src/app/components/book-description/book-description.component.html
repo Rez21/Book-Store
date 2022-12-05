@@ -13,7 +13,7 @@
 
         <div class="bottom-options">
             <div class="buttons">
-                <button class="cart-button"  mat-raised-button>Add to Bag</button>
+                <button class="cart-button"  mat-raised-button (click)="addToBag()">Add to Bag</button>
            
                 <button class="wishlist-button" mat-raised-button>Wishlist</button>
             </div>
@@ -21,7 +21,7 @@
         </div>
     </div>
     
-    <div class="book-description-container">
+    <div class="book-des-container">
         <div class="book-name">
             {{book.bookName}}
         </div>
@@ -40,7 +40,7 @@
             <p>Rs. {{book.price}}</p><p class="actual-price">Rs. 2000</p>
         </div>
         <hr>
-        <div class="book-description">
+        <div class="book-des">
             <div>
                 <ul>
                     <li>Book Details</li>
@@ -52,8 +52,9 @@
         
         </div>
         <hr>
-        <div class="">
-
+        <div class="Customer-feedback-section">
+            <h2>Customer Feedback</h2>
+            
         </div>
 
     </div>

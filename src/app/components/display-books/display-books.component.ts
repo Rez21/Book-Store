@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { throwToolbarMixedModesError } from '@angular/material/toolbar';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/dataService/data.service';
 
@@ -15,7 +16,8 @@ export class DisplayBooksComponent implements OnInit {
  author: any;
  quantity:any
  price: any;
- totalLength:any;
+ pageSize=12;
+ page:number=1;
   constructor(private route: Router, private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -26,6 +28,5 @@ export class DisplayBooksComponent implements OnInit {
 
   onclick(book: any){
   this.dataService.SendBookDetails(book)
-  this.route.navigateByUrl('Book')   
-  
+  this.route.navigateByUrl('Book')
 }}

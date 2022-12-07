@@ -25,3 +25,28 @@ mat-icon{
     color: white;
     width: 295px;
 }
+@media screen and (max-width: 360px){
+    .signup-container{
+        display: flex;
+        flex-direction: column;
+       padding-left: 25px;
+    }
+    mat-form-field{
+        width: 250px;
+        margin-bottom: 5px;
+        height: 65px; 
+    }
+    .submitBtn{
+        background-color: #A03037;
+        color: white;
+        width: 250px;
+    }
+}
+@media screen and (max-width: 900px) and (min-width: 360px){
+    .signup-container{
+        display: flex;
+        flex-direction: column;
+       max-width: 450px;
+       margin-left: 24%;
+    }
+}

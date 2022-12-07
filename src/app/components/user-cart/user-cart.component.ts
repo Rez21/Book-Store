@@ -26,4 +26,11 @@ export class UserCartComponent implements OnInit {
   returnToHome(){
     this.router.navigateByUrl('/dashboard')
   }
+
+  deletCartItem(cartItemId_id:any){
+    console.log(cartItemId_id)
+    this.cart.deleteItem(cartItemId_id).subscribe((res: any)=>{
+     console.log(res);
+    })
+  }
 }

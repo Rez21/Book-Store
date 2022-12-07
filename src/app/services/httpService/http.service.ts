@@ -17,20 +17,25 @@ export class HttpService {
   getService(url: string, httpOptions: any) {
     return this.httpclient.get(this.baseUrl+url, httpOptions)
   }
-
-  addToCart(url: string,payload:any, token: boolean=true, httpOptions: any) {
-    return this.httpclient.post(this.baseUrl+url,payload,token && httpOptions)
-  }
-  getcartItems(url: string, token: boolean=true, httpOptions: any){
-    return this.httpclient.get(this.baseUrl+url,token && httpOptions)
-  }
+  
   deleteCartItems(url: string, token: boolean=true, httpOptions: any){
     return this.httpclient.delete(this.baseUrl+url,token && httpOptions)
   }
 
+  addToCart(url: string,payload:any, token: boolean=true, httpOptions: any) {
+    return this.httpclient.post(this.baseUrl+url,payload,token && httpOptions)
+  }
+
+  getcartItems(url: string, token: boolean=true, httpOptions: any){
+    return this.httpclient.get(this.baseUrl+url,token && httpOptions)
+  }
+
+
+
   addToWishlist(url: string,payload:any, token: boolean=true, httpOptions: any) {
     return this.httpclient.post(this.baseUrl+url,payload,token && httpOptions)
   }
+
   getWishlistItems(url: string, token: boolean=true, httpOptions: any){
     return this.httpclient.get(this.baseUrl+url,token && httpOptions)
   }

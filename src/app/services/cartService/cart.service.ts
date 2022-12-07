@@ -25,13 +25,22 @@ export class CartService {
   }
 
   cartItems(){
-    this.token = localStorage.getItem('token')
     let header = {
       headers: new HttpHeaders({
-        'accept': 'application/json',
+        'Content-Type': 'application/json',
         'x-access-token': this.token
       })
     }
     return this.httpService.getcartItems("/bookstore_user/get_cart_items",true, header)
+  }
+  deleteItem(cartItemId_id: any)
+  {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token': this.token
+      })
+    }
+    return this.httpService.deleteCartItems("/bookstore_user/remove_cart_item/"+cartItemId_id,true,header)
   }
 }

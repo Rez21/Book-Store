@@ -1,1 +1,46 @@
-<p>user-cart works!</p>
+<div>
+    <app-navbar></app-navbar>
+</div>
+<div class="return-home">
+    <span class="return" (click)=" returnToHome()">Home / cart</span>
+</div>
+<div class="cart-main-container">
+    <div class="book-options">
+        <div class="CartItem-count">
+
+        </div>
+        <div class="cart-sub " *ngFor='let cartitem of cartBook'>
+            
+            <div class="cart-item-details">
+                <div class="book-image">
+                    <img src="../../../assets/UXbookCover.png">
+                </div>
+                <div class="book-details">
+                    <div class="book-title">
+                        <p>{{cartitem.product_id.bookName}}</p>
+                    </div>
+                    <div class="book-author">
+                        <p>by {{cartitem.product_id.author}}</p>
+                    </div>
+                    <div class="book-price">
+                        <p>Rs. {{cartitem.product_id.price}}</p>
+                    </div>
+                    <div class="delete-button">
+                        <p>Remove {{cartitem.product_id._id}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="address-details">
+
+            </div>
+            <div class="order-summary">
+                
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div>
+    <app-footer></app-footer>
+</div>

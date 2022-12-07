@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartService } from 'src/app/services/cartService/cart.service';
+import { DataService } from 'src/app/services/dataService/data.service';
 
 @Component({
   selector: 'app-user-cart',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserCartComponent implements OnInit {
 
-  constructor() { }
+  cartBook: any=[]
+  constructor(private dataService : DataService,private router:Router,private cart: CartService) { }
 
   ngOnInit(): void {
+    this.getCartBooks();
+    
   }
-
+  getCartBooks(){
+   this.cart.cartItems().subscribe((res:any)=>{
+    this.cartBook = res.result;
+    console.log(this.cartBook)
+   })
+  }
+  returnToHome(){
+    this.router.navigateByUrl('/dashboard')
+  }
 }

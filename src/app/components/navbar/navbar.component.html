@@ -16,14 +16,14 @@
 
                 <mat-menu #profileMenu="matMenu">
                     <div class="Menu">
-                        <div class="menuDescription">
-                            <span class="head pad">Welcome <span *ngIf="isLoggedIn" class="UserName"></span> </span><br>
+                        <!-- <div class="menuDescription"> -->
+                            <!-- <span class="head pad">Welcome <span *ngIf="isLoggedIn" class="UserName"></span> </span><br>
                             <span *ngIf="!isLoggedIn" class=" padb">To access account and manage orders</span>
                         </div>
                         <div *ngIf="!isLoggedIn" (click)="redirectToLogin()" class="loginBtn">
                             login/signup
-                        </div>
-                        <div *ngIf="isLoggedIn" (click)="redirectToLogout()" class="loginBtn chg-width">
+                        </div> *ngIf="isLoggedIn"-->
+                        <div  (click)="redirectToLogout()" class="loginBtn chg-width">
                             logout
                         </div>
                         <hr>
@@ -38,7 +38,7 @@
                 <!-- <button class="profile-button"><img src="../../../assets/person_white_24dp.svg">Profile</button> -->
             </div>
 
-            <div class="cart-option">
+            <div class="cart-option" (click)=" redirectToCart()">
                 <img class="cart-image" src="../../../assets/cart.svg" alt="cart-image">
                 <p>Cart</p>
             </div>

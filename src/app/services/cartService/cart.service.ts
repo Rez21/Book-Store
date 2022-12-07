@@ -23,4 +23,15 @@ export class CartService {
     }
     return this.httpService.addToCart("/bookstore_user/add_cart_item/"+book.product_id,book, true, header)
   }
+
+  cartItems(){
+    this.token = localStorage.getItem('token')
+    let header = {
+      headers: new HttpHeaders({
+        'accept': 'application/json',
+        'x-access-token': this.token
+      })
+    }
+    return this.httpService.getcartItems("/bookstore_user/get_cart_items",true, header)
+  }
 }

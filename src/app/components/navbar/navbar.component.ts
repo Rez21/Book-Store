@@ -20,7 +20,13 @@ export class NavbarComponent implements OnInit {
     this.route.navigateByUrl('/login');
   }
   redirectToLogout() {
-    this.isLoggedIn = false;
-    localStorage.clear();
+    localStorage.removeItem('token');
+    this.route.navigateByUrl("/login")
+  }
+  redirectToCart(){
+    this.route.navigateByUrl('/cart');
+  }
+  redirectToWishlist(){
+    this.route.navigateByUrl('wishlist')
   }
 }

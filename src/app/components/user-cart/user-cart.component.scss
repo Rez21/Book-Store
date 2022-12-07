@@ -1,0 +1,36 @@
+.cart-main-container{
+    margin-top: 20px;
+    margin-left: 250px;
+
+    .book-options{
+        width: 970px;
+        height: auto;
+        border: 0.5px solid rgb(175, 170, 170);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+  
+    .book-details{
+        margin-left: 20px;
+    }
+   .cart-item-details{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-top: 30px;
+   }
+    img{
+        width: 150px;
+    }
+    .book-title{
+        margin-top: 5px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+.return-home{
+    margin-left: 250px;
+    margin-top: 85px;
+    cursor: pointer;
+}

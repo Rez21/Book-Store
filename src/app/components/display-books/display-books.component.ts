@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { throwToolbarMixedModesError } from '@angular/material/toolbar';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/dataService/data.service';
 
@@ -18,10 +17,15 @@ export class DisplayBooksComponent implements OnInit {
  price: any;
  pageSize=12;
  page:number=1;
+ Search='';
   constructor(private route: Router, private dataService: DataService) { }
 
   ngOnInit(): void {
     console.log(this.receiveBookList);
+    this.dataService.getBookDetails.subscribe((res:any)=>{
+      console.log(res)
+      this.Search=res;
+    })
 
   }
 

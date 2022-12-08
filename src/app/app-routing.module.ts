@@ -12,7 +12,7 @@ import { UserCartComponent } from './components/user-cart/user-cart.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 const routes: Routes = [
-  {path:' ', component:LoginComponent},
+  {path:'', component:LoginComponent},
   {path:'login', component:LoginComponent},
   {path:'navbar',component:NavbarComponent},
   {path:'Book',component: BookDescriptionComponent},

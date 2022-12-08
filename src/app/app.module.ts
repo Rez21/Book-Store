@@ -31,6 +31,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { BookDescriptionComponent } from './components/book-description/book-description.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { UserCartComponent } from './components/user-cart/user-cart.component';
+import { FilterPipe } from './Pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { UserCartComponent } from './components/user-cart/user-cart.component';
     BookDetailsComponent,
     BookDescriptionComponent,
     WishlistComponent,
-    UserCartComponent
+    UserCartComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

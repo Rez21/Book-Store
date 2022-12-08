@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="books-display-container" >
-    <div class="book-card" *ngFor='let book of receiveBookList'  (click)="onclick(book)">
+    <div class="book-card" *ngFor='let book of receiveBookList | filter : Search'  (click)="onclick(book)">
         <div  class="book-display-card">
             <div class="book-image" >
                 <img src="../../../assets/UXbookCover.png" alt="Book Image here">

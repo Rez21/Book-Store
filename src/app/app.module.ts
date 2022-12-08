@@ -31,6 +31,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { BookDescriptionComponent } from './components/book-description/book-description.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { UserCartComponent } from './components/user-cart/user-cart.component';
+import { AuthGuardService } from './services/authguardServices/auth-guard.service';
 import { FilterPipe } from './Pipe/filter.pipe';
 
 @NgModule({
@@ -67,7 +68,7 @@ import { FilterPipe } from './Pipe/filter.pipe';
     NgxPaginationModule
 
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

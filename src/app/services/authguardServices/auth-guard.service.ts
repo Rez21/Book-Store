@@ -8,6 +8,6 @@ export class AuthGuardService {
   constructor() { }
 
   getToken(){  
-    return !!localStorage.getItem("token");  
-    } 
+    return !!localStorage.getItem('token');  
+   } 
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/services/cartService/cart.service';
 import { DataService } from 'src/app/services/dataService/data.service';
 
 @Component({
@@ -8,13 +9,21 @@ import { DataService } from 'src/app/services/dataService/data.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  @Input() recieveCartBookList: any
   isProfile = false;
   isLoggedIn = false;
   token: any;
-  constructor(private route: Router,private dataService: DataService) { }
-
-  ngOnInit(): void {
+  content: any
+  constructor(private route: Router,private dataService: DataService,private cartService: CartService) { 
+    this.content = localStorage.getItem('cartItem')
   }
+  
+  ngOnInit(): void {
+    this.cartService.cartItems();
+    localStorage.getItem('cartItem')
+
+  }
+
 
   searchBook(event:any){
     this.dataService.SendBookDetails(event.target.value)

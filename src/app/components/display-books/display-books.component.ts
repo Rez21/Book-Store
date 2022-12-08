@@ -15,7 +15,7 @@ export class DisplayBooksComponent implements OnInit {
  author: any;
  quantity:any
  price: any;
- pageSize=12;
+ totalLength: any;
  page:number=1;
  Search='';
   constructor(private route: Router, private dataService: DataService) { }
@@ -25,6 +25,8 @@ export class DisplayBooksComponent implements OnInit {
     this.dataService.getBookDetails.subscribe((res:any)=>{
       console.log(res)
       this.Search=res;
+
+      this.totalLength = res.length;
     })
 
   }

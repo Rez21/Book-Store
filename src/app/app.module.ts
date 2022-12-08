@@ -14,6 +14,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatBadgeModule} from '@angular/material/badge';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 
 
@@ -65,6 +66,7 @@ import { FilterPipe } from './Pipe/filter.pipe';
     MatMenuModule,
     MatTooltipModule,
     MatPaginatorModule,
+    MatBadgeModule,
     NgxPaginationModule
 
   ],

@@ -1,25 +1,24 @@
 <div class="top-section">
     <div class="Book-count">
-        <h2>Books</h2><p>({{receiveBookList.length}})</p>
+        <h2>Books</h2>
+        <p>({{receiveBookList.length}})</p>
     </div>
 </div>
-<div class="books-display-container" >
-    <div class="book-card" *ngFor='let book of receiveBookList | filter : Search | paginate: { itemsPerPage: 8, currentPage: page, totalItems:totalLength }'  (click)="onclick(book)">
-        <div  class="book-display-card">
-            <div class="book-image" >
+<div class="books-display-container">
+    <div class="book-card"
+        *ngFor='let book of receiveBookList | filter : Search | paginate: { itemsPerPage: 8, currentPage: page, totalItems:totalLength }'
+        (click)="onclick(book)">
+        <div class="book-display-card">
+            <div class="book-image">
                 <img src="../../../assets/UXbookCover.png" alt="Book Image here">
             </div>
             <div class="book-details">
                 <div class="book-title">
                     {{book.bookName}}
                 </div>
-                <!-- <div class="book-description">
-            {{book.description}}
-            </div> -->
                 <div class="book-author">
                     <p>by {{book.author}}</p>
                 </div>
-
                 <div class="book-rating-section">
                     <div class="star-rating">
                         <p>4</p><img src="../../../assets/rating-star.svg">
@@ -29,17 +28,18 @@
                     </div>
                 </div>
                 <div class="book-price">
-                    <p>Rs. {{book.discountPrice}}</p><p class="actual-price">Rs.{{book.price}}</p>
+                    <p>Rs. {{book.discountPrice}}</p>
+                    <p class="actual-price">Rs.{{book.price}}</p>
                 </div>
             </div>
-            <span class="quickView" >
+            <span class="quickView">
                 Quick View
             </span>
         </div>
-        
+
     </div>
-   
+
 </div>
 <div class="page-numbers">
-    <pagination-controls (pageChange)="page = $event"></pagination-controls>
-    </div>
+    <pagination-controls style="text-align: center;" (pageChange)="page = $event"></pagination-controls>
+</div>

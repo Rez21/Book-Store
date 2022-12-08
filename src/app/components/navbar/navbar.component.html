@@ -39,7 +39,7 @@
             </div>
 
             <div class="cart-option" (click)=" redirectToCart()">
-                <img class="cart-image" src="../../../assets/cart.svg" alt="cart-image">
+               <mat-icon [matBadge]="content" matBadgeSize = 'small' matBadgeColor="warn"> <img class="cart-image" src="../../../assets/cart.svg" alt="cart-image"></mat-icon>
                 <p>Cart</p>
             </div>
 

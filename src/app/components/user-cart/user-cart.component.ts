@@ -21,6 +21,7 @@ export class UserCartComponent implements OnInit {
    this.cart.cartItems().subscribe((res:any)=>{
     this.cartBook = res.result;
     console.log(this.cartBook)
+    localStorage.setItem('cartItem', res.result.length)
    })
   }
   returnToHome(){

@@ -9,7 +9,11 @@ import { DataService } from 'src/app/services/dataService/data.service';
   styleUrls: ['./user-cart.component.scss']
 })
 export class UserCartComponent implements OnInit {
-
+  isClicked=false;
+  userAddress:any=[];
+  isClickedHome=false;
+  isContinued=false;
+  isCheckout=false;
   cartBook: any=[]
   constructor(private dataService : DataService,private router:Router,private cart: CartService) { }
 
@@ -33,5 +37,11 @@ export class UserCartComponent implements OnInit {
     this.cart.deleteItem(cartItemId_id).subscribe((res: any)=>{
      console.log(res);
     })
+  }
+
+  addressDetails(book: any){
+    this.isClicked= true;
+    this.isContinued=true;
+    
   }
 }

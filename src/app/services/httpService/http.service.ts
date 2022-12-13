@@ -43,7 +43,9 @@ export class HttpService {
   addFeedback(url: string,payload:any, token: boolean=true, httpOptions: any) {
     return this.httpclient.post(this.baseUrl+url,payload,token && httpOptions)
   }
-
+  putService(url: string, reqData: any, token: boolean = true, httpOptions: any) {
+    return this.httpclient.put(this.baseUrl+url,reqData,token && httpOptions)
+  }
 
   // addToWishLlist(url: string, reqData: any, token: boolean = false, httpOptions: any) {
   //   return this.httpclient.post(this.baseUrl+url,reqData,token && httpOptions)

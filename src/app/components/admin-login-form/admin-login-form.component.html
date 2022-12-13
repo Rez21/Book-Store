@@ -1,0 +1,31 @@
+<div class="login-container">
+    <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="input-fields">
+        <mat-form-field appearance="outline">
+          <mat-label>Admin Email Address</mat-label>
+          <input class="input" formControlName="email" matInput type="email" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Admin Password</mat-label>
+          <input [type]="showPwd? 'text':'password'" class="input" formControlName="password" matInput type="password"/>
+          <mat-icon (click)="OnCheck()" *ngIf="visible"  matSuffix>visibility</mat-icon>
+          <mat-icon (click)="OnCheck()" *ngIf="!visible"  matSuffix>visibility_off</mat-icon>
+          <mat-hint>Forgot Password?</mat-hint>
+        </mat-form-field>
+      </div>
+  
+      <div class="buttonsPart">
+        <button class="submitBtn" mat-raised-button>
+          Login
+        </button>
+      </div>
+    </form>
+  
+    <div class="OnlineButtons">
+      <div class="separator"><b>OR</b></div>
+      <div class="bottom-buttons">
+        <button class="buttons" mat-raised-button color="primary">Facebook</button>
+        <button class="buttons" mat-raised-button>Google</button>
+      </div>
+    </div>
+  </div>

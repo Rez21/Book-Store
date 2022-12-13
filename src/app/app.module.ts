@@ -16,6 +16,8 @@ import { MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatBadgeModule} from '@angular/material/badge';
 import {NgxPaginationModule} from 'ngx-pagination'; 
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 
@@ -34,6 +36,11 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { UserCartComponent } from './components/user-cart/user-cart.component';
 import { AuthGuardService } from './services/authguardServices/auth-guard.service';
 import { FilterPipe } from './Pipe/filter.pipe';
+import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
+import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
+import { PlaceOrderComponent } from './components/place-order/place-order.component';
+import { AdminLoginFormComponent } from './components/admin-login-form/admin-login-form.component';
+import { AdminRegistrationFormComponent } from './components/admin-registration-form/admin-registration-form.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +56,12 @@ import { FilterPipe } from './Pipe/filter.pipe';
     BookDescriptionComponent,
     WishlistComponent,
     UserCartComponent,
-    FilterPipe
+    FilterPipe,
+    CustomerDetailsComponent,
+    OrderSummaryComponent,
+    PlaceOrderComponent,
+    AdminLoginFormComponent,
+    AdminRegistrationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +79,9 @@ import { FilterPipe } from './Pipe/filter.pipe';
     MatTooltipModule,
     MatPaginatorModule,
     MatBadgeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatRadioModule,
+    MatSlideToggleModule
 
   ],
   providers: [AuthGuardService],

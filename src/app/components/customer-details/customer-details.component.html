@@ -1,0 +1,35 @@
+<div class="customer-details-container">
+    <div class="name-number">
+        <div class="customer-name">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input class="input" formControlName="fullName" matInput type="text" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input class="input" formControlName="mobileNumber" matInput type="text" />
+            </mat-form-field>
+        </div>
+        <div class="editable-address-fields">
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <input class="input" formControlName="address" matInput type="text" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>city/town</mat-label>
+                <input class="input" formControlName="city" matInput type="text" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>state</mat-label>
+                <input class="input" formControlName="state" matInput type="text" />
+            </mat-form-field>
+        </div>
+        <div class="address-type">
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Home</mat-radio-button>
+                <mat-radio-button value="2">Work</mat-radio-button>
+                <mat-radio-button value="3">Other</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </div>
+</div>

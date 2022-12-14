@@ -91,8 +91,13 @@ button {
 }
 .admin-toggle{
     position: absolute;
-    margin-top: 600px;
-    left: 61%;
+    margin-top: 567px;
+    left: 60%;
+    cursor: pointer;
+    a{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(102, 104, 105);
+    }
     
 }
 

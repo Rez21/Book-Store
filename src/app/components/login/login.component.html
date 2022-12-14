@@ -3,7 +3,7 @@
         <img class="cart-logo" src="../../../assets/home-cart.png">
         <p>Online Book Shopping</p>
     </div>
-    <div class="login-container">
+    <div class="login-container" *ngIf="!adminDetails">
         <mat-tab-group class="tabs">
             <mat-tab label="Login">
                 <app-login-form></app-login-form>
@@ -14,8 +14,20 @@
             </mat-tab>
         </mat-tab-group>
     </div>
-    <div class="admin-toggle">
-        <mat-slide-toggle>Switch to Admin!</mat-slide-toggle>
-
+    <div class="login-container" *ngIf="adminDetails">
+        <mat-tab-group class="tabs">
+            <mat-tab label="Login">
+                 <app-admin-login-form></app-admin-login-form> 
+            </mat-tab>
+            <mat-tab label="SignUp">
+                <app-admin-registration-form></app-admin-registration-form>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    <div class="admin-toggle" *ngIf="!adminDetails">
+        <a (click)="switchAdmin()">Switch to Admin!</a>
+    </div>
+    <div class="admin-toggle" *ngIf="adminDetails">
+        <a (click)=" switchUser()">Switch to User!</a>
     </div>
 </div>

@@ -6,12 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  islogin=false;
-  isSignUp=false;
- 
+
+  adminDetails= false;
   constructor() { }
 
   ngOnInit(): void {
   }
-  
+
+  switchAdmin(){
+    this.adminDetails = true
+  }
+  switchUser(){
+    this.adminDetails = false
+  }
 }

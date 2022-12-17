@@ -49,5 +49,4 @@ export class DisplayBooksComponent implements OnInit {
     this.receiveBookList.reverse();
   } 
 
-
 }

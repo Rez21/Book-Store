@@ -1,12 +1,12 @@
 <mat-toolbar class="sticky-top">
     <div class="nav-bar">
     <div class="logo-section-main">
-        <div class="logo-section" >
+        <div class="logo-section" (click)=" redirectToDashBoard()" >
             <img class="book-logo" src="../../../assets/education.svg">
             <span class="name-logo">Bookstore</span>
         </div>
         <div class="search-section">
-            <!-- <div><img class="search-image" src="../../../assets/search.png"></div> -->
+            
             <div><input type="text" placeholder="Search" #search (keyup)="searchBook($event)"></div>
         </div>
         <div class="end-buttons">

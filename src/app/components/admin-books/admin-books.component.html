@@ -1,1 +1,78 @@
-<p>admin-books works!</p>
+<div>
+    <app-admin-navbar></app-admin-navbar>
+</div>
+<div class="top-section">
+    <div class="Book-count">
+        <h2>Books</h2>
+        <p>({{recieveAdminBookList.length}})</p>
+    </div>
+    <div class="sort-books">
+        <mat-form-field appearance="outline">
+            <mat-label>Sort by relevance</mat-label>
+            <mat-select class="matselect">
+              <mat-option  value="one" (click)="lowtohigh()">Price:Low to High</mat-option>
+              <mat-option (click)="hightolow()" value="two">Price:High to Low</mat-option>
+              <mat-option (click)="newestarrivals()" value="third">Newest Arrivals</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+</div>
+<table mat-table [dataSource]="recieveAdminBookList  |paginate: {itemsPerPage: 6 , currentPage:page,totalItems:totalLength}" class="mat-elevation-z8 order-table">
+    
+    <ng-container matColumnDef="Image">
+        <th mat-header-cell *matHeaderCellDef> Image </th>
+        <td mat-cell *matCellDef="let Book"><img src="../../../assets/UXbookCover.png"></td>
+      </ng-container>
+  
+    <ng-container matColumnDef="BookName">
+      <th mat-header-cell *matHeaderCellDef> Book Name </th>
+      <td mat-cell *matCellDef="let Book"> {{Book.bookName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Author" class="author">
+        <th mat-header-cell *matHeaderCellDef> Author </th>
+        <td mat-cell *matCellDef="let Book">{{Book.author}}</td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="description" class="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let Book">{{Book.description}}</td>
+      </ng-container>
+
+
+    <ng-container matColumnDef="BookPrice" class="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let Book"> {{Book.price}} </td>
+    </ng-container>
+   
+    <ng-container matColumnDef="Descount">
+        <th mat-header-cell *matHeaderCellDef> Discount Price </th>
+        <td mat-cell *matCellDef="let Book" > {{Book.discountPrice}} </td>
+      </ng-container>
+
+
+    <ng-container matColumnDef="Quantiy">
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let Book" > {{Book.quantity}} </td>
+    </ng-container>
+    
+
+
+      <ng-container matColumnDef="approve-btn">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell  *matCellDef="let Book"> <button mat-raised-button color="primary" (click)="updateDialog(Book)">Update</button> <button mat-raised-button (click)="deleteItem(Book._id)">Delete</button></td>
+      </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+  </table>
+
+  <div class="page">
+    <pagination-controls style="text-align: center;" (pageChange)="page=$event" class="page"></pagination-controls>
+  </div>
+  
+  <div>
+    <app-footer></app-footer>
+  </div>

@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationGuard } from './authentication.guard';
+import { AdminBooksComponent } from './components/admin-books/admin-books.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminLoginFormComponent } from './components/admin-login-form/admin-login-form.component';
 import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
 import { BookDescriptionComponent } from './components/book-description/book-description.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayBooksComponent } from './components/display-books/display-books.component';
+import { GetAllAdminBooksComponent } from './components/get-all-admin-books/get-all-admin-books.component';
 import { GetOrdersComponent } from './components/get-orders/get-orders.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { LoginComponent } from './components/login/login.component';
@@ -33,12 +36,14 @@ const routes: Routes = [
       
     ],},
 
-
-  {path:'AdminHome',component:AdminDashboardComponent,canActivate:[AuthenticationGuard],
+  {path:'admin-login', component:AdminLoginFormComponent},  
+  {path:'AdminHome',component:AdminDashboardComponent,
     children:[
+      {path:'admin-books',component: GetAllAdminBooksComponent},
       {path:'orders', component:GetOrdersComponent},
     ]
 }
+
 
 ];
 

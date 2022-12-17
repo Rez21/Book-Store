@@ -55,4 +55,25 @@ export class BookServiceService {
   }
 
 
+  UpdateBook(bookId:any,req:any)
+  {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token': this.adminToken
+      })
+    }
+    return this.httpService.putService("/bookstore_user/admin/update/book/"+bookId, req, true, header)
+  }
+  deleteBook(Book:any)
+  {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token': this.adminToken
+      })
+    }
+    return this.httpService.deleteService("/bookstore_user/admin/delete/book/"+Book, true, header)
+  }
+
 }

@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
@@ -11,8 +12,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule } from '@angular/material/menu';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatBadgeModule} from '@angular/material/badge';
 import {NgxPaginationModule} from 'ngx-pagination'; 
@@ -20,6 +21,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import { AppComponent } from './app.component';
@@ -47,6 +49,8 @@ import { AdminOrdersComponent } from './components/admin-orders/admin-orders.com
 import { AdminBooksComponent } from './components/admin-books/admin-books.component';
 import { GetOrdersComponent } from './components/get-orders/get-orders.component';
 import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.component';
+import { GetAllAdminBooksComponent } from './components/get-all-admin-books/get-all-admin-books.component';
+import { UpdateBookComponent } from './components/update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -70,9 +74,11 @@ import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.com
     AdminRegistrationFormComponent,
     AdminDashboardComponent,
     AdminOrdersComponent,
-    AdminBooksComponent,
     GetOrdersComponent,
-    AdminNavbarComponent
+    AdminNavbarComponent,
+    GetAllAdminBooksComponent,
+    UpdateBookComponent,
+    AdminBooksComponent
   ],
   imports: [
     BrowserModule,
@@ -94,7 +100,9 @@ import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.com
     MatRadioModule,
     MatSlideToggleModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    FormsModule
 
   ],
   providers: [AuthGuardService],

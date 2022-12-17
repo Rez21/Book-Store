@@ -40,7 +40,7 @@ export class AdminLoginFormComponent implements OnInit {
         console.log(response);
         localStorage.setItem('adminToken', response.result.accessToken);
 
-        this.router.navigateByUrl('/orders')
+        // this.router.navigateByUrl('/AdminHome/admin-books')
       })
       
     }

@@ -23,6 +23,9 @@ export class AdminNavbarComponent implements OnInit {
   }
 
   redirectToOrders(){
-    this.route.navigateByUrl('/orders')
+    this.route.navigateByUrl('/AdminHome/orders')
+  }
+  redirectToDashBoard(){
+    this.route.navigateByUrl('/AdminHome/admin-books')
   }
 }

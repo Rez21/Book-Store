@@ -1,0 +1,52 @@
+img{
+    width:50px;
+    height: auto;
+    margin-top: 5px;
+}
+.description{
+    max-width: 250px;
+    content: w;
+}
+td , th {
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 250px;
+}
+.mat-table{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.mat-cell {
+    padding-right: 90px;
+  }
+
+  button{
+    margin-right: 10px;
+  }
+
+  .top-section{
+    margin-top: 70px;
+    margin-left: 215px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    .Book-count{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    p{
+        margin-left: 10px;
+        font-size: small;
+        color: #cfc0c0;
+        
+    }
+    .sort-books{
+        margin-left: 760px;
+    }
+}
+mat-form-field{
+    height: 20px;
+    width: 180px;
+}
+

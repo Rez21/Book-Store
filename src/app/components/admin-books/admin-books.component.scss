@@ -34,6 +34,7 @@ td , th {
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-top: 6px;
     }
     p{
         margin-left: 10px;
@@ -42,11 +43,14 @@ td , th {
         
     }
     .sort-books{
-        margin-left: 760px;
+        margin-left: 570px;
     }
 }
 mat-form-field{
     height: 20px;
     width: 180px;
 }
-
+.add-book-btn{
+    margin-left: 15px;
+    margin-top: 6px;
+}

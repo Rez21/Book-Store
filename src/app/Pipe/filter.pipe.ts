@@ -7,7 +7,7 @@ export class FilterPipe implements PipeTransform {
 
   transform(value: any,args: any) {
     console.log(args)
-    if(args==" "){
+    if(args=='All books'){
       return value
     }else{
       args=args.toLowerCase();

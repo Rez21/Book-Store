@@ -36,6 +36,10 @@ const routes: Routes = [
       
     ],},
 
+
+
+
+    {path:'',redirectTo:"/admin-login",pathMatch:'full'},  
   {path:'admin-login', component:AdminLoginFormComponent},  
   {path:'AdminHome',component:AdminDashboardComponent,
     children:[

@@ -51,6 +51,7 @@ import { GetOrdersComponent } from './components/get-orders/get-orders.component
 import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.component';
 import { GetAllAdminBooksComponent } from './components/get-all-admin-books/get-all-admin-books.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { UpdateBookComponent } from './components/update-book/update-book.compon
     AdminNavbarComponent,
     GetAllAdminBooksComponent,
     UpdateBookComponent,
-    AdminBooksComponent
+    AdminBooksComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,

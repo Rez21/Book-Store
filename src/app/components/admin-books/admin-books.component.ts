@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { BookServiceService } from 'src/app/services/bookService/book-service.service';
 import { DataService } from 'src/app/services/dataService/data.service';
+import { AddBookComponent } from '../add-book/add-book.component';
 import { UpdateBookComponent } from '../update-book/update-book.component';
 
 @Component({
@@ -66,7 +67,22 @@ export class AdminBooksComponent implements OnInit {
     })
   }
 
-
+  addBook(){
+    const dialogRef=this.dialog.open(AddBookComponent,{
+      width:'40%',
+      height:'auto',
+    });
+    dialogRef.afterClosed().subscribe(reponse=>{
+      
+      this.bookName;
+      this.author;
+      this.description;
+      this.quantity;
+      this.price;
+      this.discountPrice;
+      console.log('The dialog was closed',reponse);
+    })
+  }
 
 
 

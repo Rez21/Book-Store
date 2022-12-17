@@ -3,6 +3,16 @@
         <h2>Books</h2>
         <p>({{receiveBookList.length}})</p>
     </div>
+    <div class="sort-books">
+        <mat-form-field appearance="outline">
+            <mat-label>Sort by relevance</mat-label>
+            <mat-select class="matselect">
+              <mat-option  value="one" (click)="lowtohigh()">Price:Low to High</mat-option>
+              <mat-option (click)="hightolow()" value="two">Price:High to Low</mat-option>
+              <mat-option (click)="newestarrivals()" value="third">Newest Arrivals</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
 </div>
 <div class="books-display-container">
     <div class="book-card"

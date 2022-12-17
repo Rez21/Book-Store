@@ -47,6 +47,10 @@ export class HttpService {
     return this.httpclient.put(this.baseUrl+url,reqData,token && httpOptions)
   }
 
+
+  getBookService(url: string,token: boolean = true, httpOptions: any) {
+    return this.httpclient.get(this.baseUrl+url,token && httpOptions)
+  }
   // addToWishLlist(url: string, reqData: any, token: boolean = false, httpOptions: any) {
   //   return this.httpclient.post(this.baseUrl+url,reqData,token && httpOptions)
   // }

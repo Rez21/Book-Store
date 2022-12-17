@@ -39,7 +39,10 @@ export class AdminLoginFormComponent implements OnInit {
       this.user.adminLogin(payload).subscribe((response: any) => {
         console.log(response);
         localStorage.setItem('adminToken', response.result.accessToken);
+
+        this.router.navigateByUrl('/orders')
       })
+      
     }
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginForm.value))
   }

@@ -18,7 +18,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 
 
 import { AppComponent } from './app.component';
@@ -41,6 +42,11 @@ import { OrderSummaryComponent } from './components/order-summary/order-summary.
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
 import { AdminLoginFormComponent } from './components/admin-login-form/admin-login-form.component';
 import { AdminRegistrationFormComponent } from './components/admin-registration-form/admin-registration-form.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+import { AdminBooksComponent } from './components/admin-books/admin-books.component';
+import { GetOrdersComponent } from './components/get-orders/get-orders.component';
+import { AdminNavbarComponent } from './components/admin-navbar/admin-navbar.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +67,12 @@ import { AdminRegistrationFormComponent } from './components/admin-registration-
     OrderSummaryComponent,
     PlaceOrderComponent,
     AdminLoginFormComponent,
-    AdminRegistrationFormComponent
+    AdminRegistrationFormComponent,
+    AdminDashboardComponent,
+    AdminOrdersComponent,
+    AdminBooksComponent,
+    GetOrdersComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +92,9 @@ import { AdminRegistrationFormComponent } from './components/admin-registration-
     MatBadgeModule,
     NgxPaginationModule,
     MatRadioModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSelectModule,
+    MatTableModule
 
   ],
   providers: [AuthGuardService],

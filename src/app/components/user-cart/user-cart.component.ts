@@ -16,6 +16,7 @@ export class UserCartComponent implements OnInit {
   isContinued=false;
   isCheckout=false;
   cartBook: any=[]
+  user_id: any=[]
   Book: any
   description: any;
   discountPrice: any;
@@ -98,6 +99,7 @@ export class UserCartComponent implements OnInit {
     console.log("increased",this.item_qty);
     this.updateCount(cartitem);
   }
+  
   decrease(cartitem: any) {
     this.item_qty =cartitem.quantityToBuy;
     if (this.item_qty > 0) {

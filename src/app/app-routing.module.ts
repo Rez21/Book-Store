@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationGuard } from './authentication.guard';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
 import { BookDescriptionComponent } from './components/book-description/book-description.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DisplayBooksComponent } from './components/display-books/display-books.component';
+import { GetOrdersComponent } from './components/get-orders/get-orders.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -28,7 +31,14 @@ const routes: Routes = [
     children:[ 
       {path:'bookDetails',component:BookDetailsComponent},
       
-    ],}
+    ],},
+
+
+  {path:'AdminHome',component:AdminDashboardComponent,canActivate:[AuthenticationGuard],
+    children:[
+      {path:'orders', component:GetOrdersComponent},
+    ]
+}
 
 ];
 

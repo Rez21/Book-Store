@@ -6,8 +6,10 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class BookServiceService {
   token: any;
+  adminToken: any;
   constructor(private httpService: HttpService) { 
-    this.token = localStorage.getItem('token')
+    //this.token = localStorage.getItem('token')
+    this.adminToken = localStorage.getItem('adminToken')
   }
 
   getAllBooks(){
@@ -41,4 +43,16 @@ export class BookServiceService {
     }
     return this.httpService.postService("/bookstore_user/add/order", Book, true, header)
   }
+
+  getAllBookOrder(){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token': this.adminToken
+      })
+    }
+    return this.httpService.getBookService("/bookstore_user/admin/get/order",true, header)
+  }
+
+
 }

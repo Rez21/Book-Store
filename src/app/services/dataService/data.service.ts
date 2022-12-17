@@ -15,12 +15,17 @@ export class DataService {
   getCartBookDetails = this.cartBooks.asObservable();
 
 
+  private OrderBookDetails = new BehaviorSubject([]);
+  getOrderBookDetails = this.BookDetails.asObservable();
+
   constructor() { }
 
   SendBookDetails(book:any){
     this.BookDetails.next(book)
   }
-
+  SendOrderBookDetails(book: any){
+    this.OrderBookDetails.next(book)
+  }
   sendCartBook(book: any){
     this.cartBooks.next(book);
   }

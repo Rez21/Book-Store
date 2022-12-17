@@ -1,0 +1,39 @@
+<mat-toolbar class="sticky-top">
+    <div class="nav-bar">
+    <div class="logo-section-main">
+        <div class="logo-section" >
+            <img class="book-logo" src="../../../assets/education.svg">
+            <span class="name-logo">Bookstore</span>
+        </div>
+        <div class="search-section">
+            <!-- <div><img class="search-image" src="../../../assets/search.png"></div> -->
+            <div><input type="text" placeholder="Search" #search (keyup)="searchBook($event)"></div>
+        </div>
+        <div class="end-buttons">
+            <div class="profile" [matMenuTriggerFor]="profileMenu">
+                <img class="profile-image" src="../../../assets/profie.svg" alt="profile-image"><p>Profile</p>
+                <span class="bottom-line"></span>
+
+                <mat-menu #profileMenu="matMenu">
+                    <div class="Menu">
+                        <div  (click)="redirectToLogout()" class="loginBtn chg-width">
+                            logout
+                        </div>
+                        <hr>
+                        <div class="widhlist-button">
+
+                        </div>
+                    </div>
+
+                </mat-menu>
+            </div>
+
+            <div class="cart-option" (click)="redirectToOrders()">
+               <mat-icon  matBadgeSize = 'small' matBadgeColor="warn"> <img class="cart-image" src="../../../assets/confirm-order.png" alt="cart-image"></mat-icon>
+                <p>Orders</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</mat-toolbar>
